@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transportation Marketplace </title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+	  <!--	  font-awesome-->
+	  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <style>
+
+.view{
+    background-image: url(image/bg.png);
+    height: 350px;
+    width: 100%;
+    background-repeat: repeat;
+    animation: view 120s infinite linear;
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: 10px;
+    z-index: 1;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+.flight {
+    background-image: url(image/flight.png);
+    height: 167px;
+    width: 261px;
+    background-repeat: repeat;
+    position: absolute;
+    left: 0;
+    top: 52px;
+    z-index: 1;
+    animation: flight 10s infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    
+}
+@keyframes flight {
+  0%   { left: 0px; top: 0px;}
+  25%   { left: 100px; top: -35px;}
+  50%   { left: 150px; top: -50px;}
+  100%  { left:250px; top: -98px;}
+  
+}
+.conntainer{border: 1px solid #000;
+    height: 314px;
+    position: relative;
+    overflow: hidden;
+}
+.bus{    background-image: url(image/bus.png);
+    height: 216px;
+    width: 241px;
+    z-index: 999;
+    position: absolute;
+    bottom: -42px;
+    background-repeat: no-repeat;
+    animation: bus 30s infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+@keyframes bus {
+  0%   { left: 0px; bottom: -42px;}
+  100%  { left:100%;     bottom: -42px;}
+  
+}
+.train{    background-image: url(image/train.png);
+    height: 216px;
+    width: 1000px;
+    z-index: 1;
+    position: absolute;
+    bottom: -42px;
+    background-repeat: no-repeat;
+    animation: bus 10s infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+@keyframes bus {
+  0%   { left: 0px; bottom: -42px;}
+  100%  { left:100%;    bottom: -42px;}
+  
+}
+
+.ship{  background-image: url(image/ship.png);
+    height: 216px;
+    width: 345px;
+    z-index: 999;
+    position: absolute;
+    bottom: -42px;
+    background-repeat: no-repeat;
+    animation: ship 20s infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes ship {
+  0%   { left: 0px; bottom: -71px;}
+  100%  { left:100%;    bottom: -71px;}
+  
+}
+.sea{ background-image: url(image/sea.png);
+    height: 145px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    bottom: -42px;
+    background-repeat: repeat;
+   
+
+}
+footer p {z-index: 999;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 3px 1px 1px #fff;} 
+		  @media (max-width:600px){
+			  #share{
+				  flex-direction: row-reverse !important;
+			  }
+		  }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="#">Transportation Marketplace</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+             <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+             </li>
+            
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account control
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="#">Sign in</a>
+					<div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="#">Sign up</a>
+                   
+                </div>
+             </li>
+            
+          </ul>
+         
+       </div>
+    </nav>
+	  <div class="conntainer">
+		 
+    <div class="view">
+
+
+    </div>
+    <div class="flight">
+
+
+
+    </div>
+    <div class="bus">
+
+
+
+    </div>
+    <div class="train">
+
+
+
+    </div>
+    <div class="ship">
+
+
+
+    </div>
+    <div class="sea">
+
+
+
+    </div>
+  
+    
+</div>
+	  
+<div class="container-fluid py-5">
+       <div class="row">
+		  
+		   <div class="col-md-6 py-2">
+			   <h6 class="text-info py-3">ABOUT US</h6>
+			   <h2 class="py-2">Quick Transport and Logistics Solutions</h2>
+			   <p class="py-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+			   
+			   <div style="display: flex; flex-direction: row; gap:1rem" id="share">
+				   <div class="py-4" style="flex:1">
+					   <center><i class="fa fa-globe text-info py-2" style="font-size: 100px;"></i></center>
+					   <h6 class="text-info">Global Coverage</h6>
+                      <p>Our global delivery service ensures you receive our products no matter where you are, with a seamless and reliable shipping experience. Shop confidently, knowing our robust logistics network will bring our offerings to your doorstep anywhere in the world.</p>
+				   </div>
+				   <div class="py-4" style="flex:1">
+					   <center><i class="fa fa-truck text-info py-2" style="font-size: 100px;"></i></center>
+					   <h6 class="text-info">On Time Delivery</h6>
+                       <p>"On Time Delivery" means we guarantee your orders arrive precisely when expected, thanks to our meticulous planning and advanced logistics systems. Trust our dedicated team to ensure your delivery experience is smooth, reliable, and free of delays.</p>
+				   </div>
+			   </div>
+			   <div class="share-link">
+			   <a href="#" class="btn btn-info py-2 px-2 rounded shadow">Explore More</a></div>
+		   </div>
+		    <div class="col-md-6 py-2">
+			   <img src="image/about.jpg" style="width: 100%">
+		   </div>
+	</div></div>
+	  
+   <div class="container-fluid py-5">
+       <div class="row">
+		    <div class="col-md-6 py-2">
+			   <img src="image/feature.jpg" style="width: 100%">
+		   </div>
+		  
+		   <div class="col-md-6 py-2">
+			   <h6 class="text-info py-3">OUR FEATURES</h6>
+			   <h2 class="py-3"><i class="fa fa-globe px-3 text-info"></i> We Are Trusted Logistics Company</h2> 
+			   <h2 class="py-3"><i class="fa fa-truck px-3 text-info"></i> On Time Delivery</h2> 
+			   <h2 class="py-3"><i class="fa fa-phone px-3 text-info"></i> 24/7 Telephone Support</h2>
+				   
+			  
+			   <div class="share-link">
+				   <p class="py-2 px-5 text-center text-info" style="line-height: 30px;">
+					   we are committed to ensuring your orders arrive precisely when expected. Our meticulous planning and advanced logistics systems are designed to provide reliable delivery schedules, so you never have to worry about delays. We understand the importance of timely deliveries for your plans and operations, and we strive to meet our promises consistently. Our dedicated team works around the clock to monitor shipments and address any potential issues promptly, ensuring that your delivery experience is both smooth and dependable. With our "On Time Delivery" service, you can trust that your orders will be in your hands exactly when you need them.
+				   </p>
+		   </div>
+		   
+	</div></div>
+   
+	  
+	  
+	  <div class="container py-5">
+       <div class="row">
+          <div class="text-center col-lg-6 offset-lg-3">
+             <h4>Footer </h4>
+             <p>Copyright &copy; 2024 &middot; All Rights Reserved &middot; <a href="#" >Transportation Marketplace</a> <span>Designed By Al_rayan Computer's</span></p>
+          </div>
+       </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+  </body>
+</html>
