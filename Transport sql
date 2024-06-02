@@ -33,3 +33,176 @@ CREATE TABLE `admin` (
   `password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`serial`, `username`, `password`) VALUES
+(1, 'admin', '$2y$10$8Lq62eqHPS9RAMAjFkpQCuv1odVGpRZJrT.ngb5rIdEk6OLDeSNIy');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `city`
+--
+
+CREATE TABLE `city` (
+  `serial` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `date` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `city`
+--
+
+INSERT INTO `city` (`serial`, `name`, `date`) VALUES
+(1, 'bida', '2024-05-31'),
+(2, 'makwa', '2024-06-01'),
+(3, 'agae', '2024-06-01'),
+(4, 'niger', '2024-06-01'),
+(5, 'abj', '2024-06-01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `serial` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `id` varchar(200) NOT NULL,
+  `image` varchar(225) NOT NULL,
+  `date` varchar(225) NOT NULL,
+  `company_name` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `serial` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `company_name` varchar(225) NOT NULL,
+  `user_id` varchar(225) NOT NULL,
+  `company_id` varchar(225) NOT NULL,
+  `date` varchar(225) NOT NULL,
+  `status` varchar(225) NOT NULL,
+  `message` varchar(2000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`serial`, `name`, `company_name`, `user_id`, `company_id`, `date`, `status`, `message`) VALUES
+(9, 'musa yusuf', 'rayan computeruu', '301', '47', '2024', 'reject', 'I am musa yusuf, a company of \"Transport Market Place\". I am writing to request the opportunity to be your logistics driver for shipping goods to other cities. I am from bida city.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user/company`
+--
+
+CREATE TABLE `user/company` (
+  `serial` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `email` varchar(225) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `actype` varchar(30) NOT NULL,
+  `password` varchar(2000) NOT NULL,
+  `image` varchar(225) NOT NULL,
+  `company_name` varchar(225) NOT NULL,
+  `company_logo` varchar(225) NOT NULL,
+  `id` varchar(2000) NOT NULL,
+  `userimage` varchar(2000) NOT NULL,
+  `ab_company` varchar(3000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user/company`
+--
+
+INSERT INTO `user/company` (`serial`, `name`, `email`, `phone`, `city`, `actype`, `password`, `image`, `company_name`, `company_logo`, `id`, `userimage`, `ab_company`) VALUES
+(3, 'musa yusuf', 'raihan@gmail.com', '09080976544', 'bida', 'company', '123456789', 'uploads/665c6c8656dd6.png', 'rayan computeruu', 'uploads/665c6c8656dec.png', '047', 'uploads/665c6c8656ddf.jpg', 'rayan computeruu is a  To work in an establishment where my science, and education skills will be maximally utilized, as a diverse, determined and versatile graduate that I am, I want to be useful plus successful, I enjoy learning new skills and dedicated to assigned tasks.  Currently seeking a challenging and rewarding position anywhere in the world to utilize my existence skill and develop as an individual to contribute to the organizational success.'),
+(4, 'musa yusuf', 'Alfamuhammad10509@gmail.com', '090809765436', 'bida', 'user', '123456789', '', 'rayan computeruyuy', '', '301', 'uploads/665c553655fb5.jpeg', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`serial`);
+
+--
+-- Indexes for table `city`
+--
+ALTER TABLE `city`
+  ADD PRIMARY KEY (`serial`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`serial`);
+
+--
+-- Indexes for table `request`
+--
+ALTER TABLE `request`
+  ADD PRIMARY KEY (`serial`);
+
+--
+-- Indexes for table `user/company`
+--
+ALTER TABLE `user/company`
+  ADD PRIMARY KEY (`serial`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `city`
+--
+ALTER TABLE `city`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `request`
+--
+ALTER TABLE `request`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `user/company`
+--
+ALTER TABLE `user/company`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
